@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {CardElement, injectStripe} from 'react-stripe-elements';
 import { APP_SERVER_URL } from '../../config';
+import { Redirect, NavLink } from 'react-router-dom';
 
 class CheckoutForm extends Component {
   constructor(props) {
@@ -37,7 +38,12 @@ class CheckoutForm extends Component {
         body: JSON.stringify({token})
     });
 
-    if (response.ok) console.log("Purchase Complete!")
+    // if (response.ok) console.log("Purchase Complete!")
+    if (response.ok) {
+      console.log("Purchase Complete!");
+      <NavLink exact to="/"><Redirect to="/" /></NavLink>
+    }
+  
   }
 
     render() {
@@ -45,9 +51,10 @@ class CheckoutForm extends Component {
         
     return (
       <div className="checkout">
-        <p>Would you like to complete the purchase?</p>
+        <p>Would you like to add 20 credits to your account?</p>
         <CardElement />
         <button onClick={this.submit}>Send</button>
+        
       </div>
     );
   }

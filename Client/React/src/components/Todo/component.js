@@ -41,7 +41,7 @@ class Todo extends Component {
         return (
             <div>
                 <Header />
-                <h1 class="site-header">Goals-Fiverr</h1>
+                <h1 class="site-header">Goals-Enforcer</h1>
                 <p className="app-description">
                     Accomplish your goals, or pay the price!
                 </p>

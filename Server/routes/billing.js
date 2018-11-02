@@ -40,6 +40,7 @@ router.post("/charge", checkJwt, async (req, res) => {
       });
   
       res.json({status});
+      // res.redirect('/');
     } catch (err) {
     console.error(err);
       res.status(500).end();

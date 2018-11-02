@@ -24,7 +24,8 @@ class Header extends Component {
                     <li><NavLink to="/profile">Profile</NavLink></li>
                     <li><NavLink exact to="/">My Goals</NavLink></li>
                     {/* <li><Payments /></li> */}
-                    <li>
+                    <li><NavLink to="/checkout">Add Credits</NavLink></li>
+                    {/* <li>
                     <StripeProvider apiKey="pk_test_YKmWpGEng6wIUHEsJL6H6Nfr">
                         <div className="example">
                         <Elements>
@@ -32,8 +33,8 @@ class Header extends Component {
                         </Elements>
                         </div>
                     </StripeProvider>
-                    </li>
-                    <li>Credit Balance: {this.props.credits}</li>
+                    </li> */}
+                    <li className="credit-balance">Credit Balance: {this.props.credits}</li>
                 </ul>
             </nav>
         );
