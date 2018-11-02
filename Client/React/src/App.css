@@ -1,0 +1,142 @@
+.App {
+  text-align: center;
+  background-color: #f4f9fc;
+  min-height: 100vh;
+  padding-bottom: 60px;
+  box-sizing: border-box;
+  /* margin-top: 2em; */
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  height: 80px;
+  padding: 20px;
+  margin-bottom: 50px;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.navbar {
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(217, 234, 249, 0.2);
+  box-shadow: 0 1px 10px 0 #a8a8a8;
+}
+
+.navbar li {
+  float: left;
+}
+
+.navbar li a {
+  display: block;
+  color: #a8a8a8;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar li a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+.navbar li a.active {
+  color: #4c4c4c
+}
+
+.btn-group-right {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0%, -50%);
+}
+
+.download-btn {
+  border: 0;
+  border-radius: 3px;
+  margin: 10px;
+  font-size: 14px;
+  padding: 8px 15px 8px 15px;
+  box-shadow: 1px 1px 5px 0 #878787;
+  cursor: pointer;
+  min-width: 100px;
+  transition: all 0.2s;
+}
+
+.download-btn:hover {
+  box-shadow: 1px 1px 10px 0 #707070;
+}
+
+.fas.fa-download {
+  padding-right: 10px
+}
+
+.mac-download {
+  color: white;
+  background-color: rgb(173, 62, 62);
+}
+
+.win-download {
+  color: white;
+  background-color: rgb(155, 68, 109);
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 40px;;
+  width: 100%;
+  background-color: rgb(21, 51, 99, 0.7);
+  color: white;
+  text-align: center;
+  box-shadow: 0 -1px 5px 0 grey;
+  font-size: 15px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.footer li {
+  float: left;
+}
+
+.footer li a {
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: white;
+}
+
+.footer .fab.fa-github {
+  margin-right: 5px;
+}
+
+@media only screen and (max-width: 400px) {
+  .btn-group-right {
+    display: none;
+  }
+}

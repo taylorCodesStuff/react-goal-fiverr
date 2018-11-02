@@ -1,0 +1,35 @@
+{
+  "expo": {
+    "name": "React Todos Universal",
+    "description": "Simple todos demo for React Universal starter kit",
+    "slug": "react-todos-universal",
+    "privacy": "public",
+    "sdkVersion": "29.0.0",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "exp",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.universal.todos"
+    },
+    "android": {
+      "package": "com.universal.todos"
+    }
+  }
+}

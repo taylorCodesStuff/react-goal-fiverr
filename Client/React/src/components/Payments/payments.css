@@ -1,0 +1,38 @@
+.profile-img {
+    width: 200px;
+    border-radius: 50%;
+}
+
+.logout-btn {
+    border: 1px solid darkblue;
+    border-radius: 3px;
+    color: darkblue;
+    background-color: transparent;
+    font-size: 14px;
+    padding: 10px 30px 10px 30px;
+    cursor: pointer;
+    margin-top: 50px;
+    -webkit-transition: all 1s;
+    transition: all 0.2s;
+}
+
+.logout-btn:hover {
+    border-color: cornflowerblue;
+    background-color: cornflowerblue;
+    color: white;
+}
+
+.btn-credits {
+    border-radius: 12px;
+
+    border: none;
+    padding: 16px 12px;
+    text-align: center;
+    display: inline-block;
+    font-size: 15px;
+    font-family: sans-serif;
+    cursor: pointer;
+
+    background-color: rgb(217, 234, 249, 0.2);
+}
+

@@ -1,0 +1,28 @@
+{
+  "name": "react-universal",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.3.1",
+    "@types/react-addons-css-transition-group": "^15.0.5",
+    "axios": "^0.18.0",
+    "moment": "^2.22.2",
+    "react": "^16.4.2",
+    "react-addons-css-transition-group": "^15.6.2",
+    "react-dom": "^16.4.2",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "1.1.4",
+    "react-stripe-checkout": "^2.6.3",
+    "react-stripe-elements": "^2.0.1",
+    "redux": "^4.0.0",
+    "redux-thunk": "^2.3.0",
+    "socket.io": "^2.1.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
