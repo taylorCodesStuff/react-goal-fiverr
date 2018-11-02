@@ -26,6 +26,7 @@ router.post('/stripe', checkJwt, async (req, res) => {
 });
 */
 
+
 router.post("/charge", checkJwt, async (req, res) => {
     console.log( ' req.body ',  req.body )
     console.log( ' req.body id',  req.body.token.id )
