@@ -22,6 +22,7 @@ class Header extends Component {
             <nav className="navbar">
                 <ul>
                     <li><NavLink to="/profile">Profile</NavLink></li>
+                    <li><NavLink to="/about">New? Start Here!</NavLink></li>
                     <li><NavLink exact to="/">My Goals</NavLink></li>
                     {/* <li><Payments /></li> */}
                     <li><NavLink to="/checkout">Add Credits</NavLink></li>

@@ -9,6 +9,7 @@ import LogIn from './components/LogIn';
 import Callback from './components/Callback';
 import Todo from './components/Todo';
 import Checkout from './components/Checkout';
+import About from './components/About';
 import { loadSession } from './actions/authActions';
 import { joinRoomSuccess } from './actions/socketActions';
 import { APP_SERVER_URL } from './config';
@@ -50,6 +51,7 @@ class App extends Component {
               <Route exact path="/profile" render={() => this.props.isAuthenticated ? <Profile /> : <Redirect to='/login' />} />
               <Route exact path="/login" render={() => !this.props.isAuthenticated ? <LogIn /> : <Redirect to='/' />} />
               <Route exact path="/checkout" render={() => this.props.isAuthenticated ? <Checkout /> : <Redirect to='/login' />} />
+              <Route exact path="/about" render={() => this.props.isAuthenticated ? <About /> : <Redirect to='/login' />} />
               <Route exact path="/callback" component={Callback} />
             </div>
           </main>
