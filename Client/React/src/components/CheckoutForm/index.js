@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux';
 import { fetchUser } from '../../actions/auth0';
 import { removeSession } from '../../actions/authActions';
 import { handleStripeToken } from '../../actions/userActions';
+import { updateCreditBalance } from '../../actions/userActions';
 
 const mapStateToProps = (state) => {
 
@@ -12,7 +13,8 @@ const mapStateToProps = (state) => {
     success: state.userReducer.success,
     error: state.userReducer.error,
     profile: state.userReducer.profile,
-    token: state.authReducer.sessionItems.accessToken
+    token: state.authReducer.sessionItems.accessToken,
+    
   };
 
 };
@@ -22,7 +24,8 @@ const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({
     fetchUser,
     removeSession,
-    handleStripeToken
+    handleStripeToken,
+    updateCreditBalance
   }, dispatch);
 
 };

@@ -80,7 +80,7 @@ const userReducer = (state = initialState, action) => {
             walletPending: false,
             walletSuccess: true,
             walletError: false,
-            wallet: action.wallet
+            credit: action.credit
         }
     
     case 'UPDATE_WALLET_ERROR':
@@ -92,6 +92,12 @@ const userReducer = (state = initialState, action) => {
         }
 
     case 'FETCH_USER':
+        return {
+            ...state,
+            credit: action.credit
+        }
+
+    case 'UPDATE_CREDIT_BALANCE':
         return {
             ...state,
             credit: action.credit

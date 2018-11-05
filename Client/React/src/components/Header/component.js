@@ -35,7 +35,7 @@ class Header extends Component {
                         </div>
                     </StripeProvider>
                     </li> */}
-                    <li className="credit-balance">Credit Balance: {this.props.credits}</li>
+                    <li className="credit-balance">Credit Balance: {this.props.credit}</li>
                 </ul>
             </nav>
         );

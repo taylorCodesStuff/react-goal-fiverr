@@ -42,9 +42,13 @@ class TodoItem extends Component {
             }
         )
 
+        this.props.updateWallet(this.props.token, 5, this.props.credit, 'plus');
+
         this.setState({
             isEdit: false
         })
+
+        this.props.deleteItem(this.props.token, {_id: this.props.id})
     }
 
     handleUpdateWallet = (wager) => {
@@ -52,8 +56,8 @@ class TodoItem extends Component {
     }
 
     handleDelete = () => {
-        let wager = this.props.wager;
-        this.handleUpdateWallet(wager);
+        // let wager = this.props.wager;
+        // this.handleUpdateWallet(wager);
         this.props.deleteItem(this.props.token, {_id: this.props.id})
     }
 

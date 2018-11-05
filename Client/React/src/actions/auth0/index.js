@@ -49,5 +49,4 @@ export const fetchUser = (accessToken) => (dispatch) => {
         console.log(error);
         dispatch(fetchUserError());
     })
-
 }

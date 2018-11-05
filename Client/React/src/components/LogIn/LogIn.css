@@ -17,6 +17,10 @@
     color: white;
 }
 
-.description-wrapper {
+/* .description-wrapper {
     margin-top: 2em;
+} */
+
+.app-description {
+    margin-top: 50px;
 }

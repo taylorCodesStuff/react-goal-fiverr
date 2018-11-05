@@ -12,7 +12,7 @@ class Todo extends Component {
         this.state = {
             dueDate: '',
             goal: '',
-            wager: 0
+            wager: 5
         };
     }
 
@@ -24,7 +24,7 @@ class Todo extends Component {
         e.preventDefault();
         this.props.addItem(this.props.token, {title: this.input.value.trim(), dueDate: this.state.dueDate, wager: this.state.wager});
         this.input.value = ''
-        this.props.updateWallet(this.props.token, this.state.wager, false);
+        this.props.updateWallet(this.props.token, this.state.wager, this.props.credit, 'minus');
     }
 
     renderTodos = () => {
@@ -41,7 +41,7 @@ class Todo extends Component {
         return (
             <div>
                 <Header />
-                <h1 class="site-header">Goals-Enforcer</h1>
+                <h1 class="site-header">Goal Enforcer</h1>
                 <p className="app-description">
                     Accomplish your goals, or pay the price!
                 </p>
@@ -66,8 +66,8 @@ class Todo extends Component {
                                 onChange={event => this.setState({dueDate: event.target.value})}
                                 />
                         </div>
-                        Enter Wager:  
-                        ${this.state.wager}
+                        {/* Enter Wager:  
+                        ${this.state.wager} */}
                         <div>
                             {/* <input type="range" max="20" min="0" step="1" 
                                 onChange={(e) => this.setState({wager: Number(e.target.value)})}
@@ -77,7 +77,7 @@ class Todo extends Component {
                     </form>
                     <div>
                         {/* Purse: <output>{this.state.wallet}</output> */}
-                        Wallet: $<output>{this.props.wallet}</output>
+                        {/* Wallet: $<output>{this.props.wallet}</output> */}
                     </div>
                     <div className="todo-container">
                     <ReactCSSTransitionGroup

@@ -4,9 +4,11 @@ import { bindActionCreators } from 'redux';
 import { updateItem, deleteItem } from '../../actions/todoActions';
 import { updateWallet } from '../../actions/userActions';
 
+
 const mapStateToProps = (state) => {
     return {
         token: state.authReducer.sessionItems.accessToken,
+        credit: state.userReducer.credit
     }
 }
 

@@ -48,7 +48,7 @@ export const updateWalletPending = () => {
 export const updateWalletSuccess = (result) => {
     return {
         type: 'UPDATE_WALLET_SUCCESS',
-        wallet: result.wallet
+        credit: result.wallet
     }
 }
 
@@ -94,8 +94,8 @@ export const handleStripeToken = (token) => async dispatch => {
     
 }
 
-export const updateWallet = (accessToken, diff, add) => (dispatch) => {
-    console.log('ADD', add);
+export const updateWallet = (accessToken, minus, balance, equation) => (dispatch) => {
+    
     dispatch(updateWalletPending());
 
     fetch(`${APP_SERVER_URL}/users`, {
@@ -105,8 +105,9 @@ export const updateWallet = (accessToken, diff, add) => (dispatch) => {
             authorization: `Bearer ${accessToken}`,
         },
         body: JSON.stringify({
-            wallet: diff,
-            add: add
+            wallet: minus,
+            add: balance,
+            equation: equation
         }),
     })
     .then(res => {
@@ -121,4 +122,14 @@ export const updateWallet = (accessToken, diff, add) => (dispatch) => {
     .catch(error => {
         dispatch(updateWalletError());
     })
+}
+
+
+export const updateCreditBalance = (amt) => {
+    console.log('amt: ', amt);
+    
+    return {
+        type: 'UPDATE_CREDIT_BALANCE',
+        credit: amt
+    }
 }

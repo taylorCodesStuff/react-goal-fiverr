@@ -8,7 +8,7 @@ const mapStateToProps = (state) => {
     return {
         token: state.authReducer.sessionItems.accessToken,
         items: state.todoReducer.items,
-        wallet: state.userReducer.wallet
+        credit: state.userReducer.credit
     }
 }
 

@@ -6,6 +6,15 @@ import './LogIn.css';
 
 class LogIn extends Component {
 
+    constructor(props){
+        super(props);
+        this.state = {
+            quotes: [
+                "You can't have a million dollar dream with a minimum-wage work ethic"
+            ]
+        };
+    }
+
     componentDidMount() {
         //If renew access token fails, start login prompt
         if (this.props.refreshError) {
@@ -21,11 +30,11 @@ class LogIn extends Component {
     render() {
         return (
             <div className="login-wrapper">
-                {/* <h1 class="site-header">Goals</h1> */}
+                <h1 class="site-header">Goal Enforcer</h1>
                 <div className="description-wrapper">
-                    <p className="app-description">
-                        [[Random, inspirational quote]]
-                    </p>
+                    <div className="app-description">
+                        {this.state.quotes[0]}
+                    </div>
                 </div>
                 <button className='login-btn' onClick={this.onLogin}>
                     Log In
