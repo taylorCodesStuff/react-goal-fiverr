@@ -12,7 +12,7 @@ const UserSchema = mongoose.Schema({
         required: true
     },
     picture: String,
-    wallet: Number,
+    wallet: {type:Number, default: 0},
     credits: {type: Number, default: 0}
 });
 

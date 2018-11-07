@@ -10,7 +10,6 @@ class Header extends Component {
 
     componentDidMount() {
         this.props.fetchUser(this.props.token)
-        
     }
 
     onLogOut = () => {
