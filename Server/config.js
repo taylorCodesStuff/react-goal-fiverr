@@ -2,7 +2,7 @@
 
 // SERVER - CONFIG FILE
 
-exports.DATABASE_URL = process.env.DATABASE_URL || 'mongodb://localhost/react-universal';
+exports.DATABASE_URL = process.env.DATABASE_URL || 'mongodb://user:google92@ds155243.mlab.com:55243/react-goals';
 exports.TEST_DATABASE_URL = process.env.TEST_DATABASE_URL;
 exports.PORT = process.env.PORT || 8080;
 
