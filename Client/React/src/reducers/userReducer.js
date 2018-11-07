@@ -51,11 +51,13 @@ const userReducer = (state = initialState, action) => {
         }
 
     case 'STORE_USER_SUCCESS':
+        console.log('action, state: ', action, state);
         return {
             ...state,
             storePending: false,
             storeSuccess: true,
-            storeError: false
+            storeError: false,
+            credit: action.user.wallet
         }
 
     case 'STORE_USER_ERROR':

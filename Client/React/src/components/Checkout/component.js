@@ -23,13 +23,11 @@ class Checkout extends Component {
             <div className="checkout">
                 <Header />
                 <div className="checkout-form">
-                    <StripeProvider apiKey="pk_test_YKmWpGEng6wIUHEsJL6H6Nfr">
+                    <StripeProvider apiKey="pk_test_YKmWpGEng6wIUHEsJL6H6Nfr" >
                         <div className="example">
                             <fieldset>
-                                <Elements>
-                                    <CheckoutForm 
-                                        
-                                    />
+                                <Elements >
+                                    <CheckoutForm />
                                 </Elements>
                             </fieldset>
                         </div>

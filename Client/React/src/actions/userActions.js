@@ -27,9 +27,11 @@ export const storeUserPending = () => {
     }
 }
 
-export const storeUserSuccess = () => {
+export const storeUserSuccess = (user) => {
+    console.log('USER ACTION: ', user);
     return {
-        type: 'STORE_USER_SUCCESS'
+        type: 'STORE_USER_SUCCESS',
+        user
     }
 }
 
@@ -79,7 +81,8 @@ export const storeUser = (accessToken, user) => (dispatch) => {
         return res.json();
     })
     .then(result => {
-        dispatch(storeUserSuccess());
+        console.log('RESULT ', result);
+        dispatch(storeUserSuccess(result));
     })
     .catch(error => {
         dispatch(storeUserError());

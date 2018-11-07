@@ -42,6 +42,7 @@ export const fetchUser = (accessToken) => (dispatch) => {
         return res.json();
     })
     .then(user => {
+        console.log('USER: ', user);
         dispatch(fetchUserSuccess(user));
         dispatch(storeUser(accessToken, user));
     })

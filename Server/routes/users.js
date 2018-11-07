@@ -42,10 +42,10 @@ router.put('/', checkJwt, async function(req, res){
 
   try {
     const user_wallet = await User.findOne({user_id: req.user.sub}, function(err, user){
-      console.log('USER SAVE ', user);
+      console.log('REQ BODY ', req.body);
       // req.body.add ? user.wallet += req.body.wallet : user.wallet -= req.body.wallet
       // user.wallet -= req.body.wallet;
-      req.body.equation === 'minus' ? user.wallet -= req.body.wallet : user.wallet += 5
+      req.body.equation === 'minus' ? user.wallet -= req.body.wallet : user.wallet += req.body.wallet
        user.save(function(err){
           if(err){
               console.error(err);
