@@ -2,8 +2,8 @@
 export const AUTH0_DOMAIN = process.env.REACT_APP_AUTH0_DOMAIN || 'taylor-auth.auth0.com';
 export const AUTH0_CLIENT_ID = process.env.REACT_APP_AUTH0_CLIENT_ID || 'ObiJNi6NdYHErZQvxnhtebAicZnh3mcw';
 export const AUTH0_API_AUDIENCE = process.env.REACT_APP_AUTH0_API_AUDIENCE || 'https://api-react-goal-tracker.com';
-export const AUTH0_LOGIN_REDIRECT_URL = process.env.REACT_APP_AUTH0_LOGIN_REDIRECT_URL || 'http://localhost:3000/callback';
-export const AUTH0_LOGOUT_REDIRECT_URL = process.env.REACT_APP_AUTH0_LOGOUT_REDIRECT_URL || 'http://localhost:3000/';
+export const AUTH0_LOGIN_REDIRECT_URL = process.env.REACT_APP_AUTH0_LOGIN_REDIRECT_URL || 'https://stormy-earth-93998.herokuapp.com/callback';
+export const AUTH0_LOGOUT_REDIRECT_URL = process.env.REACT_APP_AUTH0_LOGOUT_REDIRECT_URL || 'https://stormy-earth-93998.herokuapp.com/';
 
 //App server
 export const APP_SERVER_URL = process.env.REACT_APP_APP_SERVER_URL || 'https://immense-tor-94867.herokuapp.com';
