@@ -94,8 +94,8 @@ class TodoItem extends Component {
                 <div className="title-container">
                     {this.renderTitle()}
                 </div>
-                <div><em>{moment(this.props.dueDate).calendar()}</em></div>
-                <div>${this.props.wager}</div>
+                <div className="wager">${this.props.wager}</div>
+                <div className="due-date"><em>{moment(this.props.dueDate).calendar()}</em></div>
                 <div className="delete-btn" onClick={this.handleDelete}>
                     <i className="fas fa-times delete-icon"></i>
                 </div>
